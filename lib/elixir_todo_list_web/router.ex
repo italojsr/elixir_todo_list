@@ -16,9 +16,10 @@ defmodule ElixirTodoListWeb.Router do
 
   scope "/", ElixirTodoListWeb do
     pipe_through :browser
-
-    get "/", PageController, :home
+    live "/", TodoLive, :index
   end
+
+
 
   # Other scopes may use custom stacks.
   # scope "/api", ElixirTodoListWeb do
